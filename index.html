@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecourse VA Aesthetic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- WRAPPER (Planner Aesthetic) --- */
+        .lynk-wrapper {
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #F8F7F4; /* Warna Kertas Broken White */
+            color: #1F2937;
+            width: 100%;
+            position: relative;
+            overflow-x: hidden;
+            padding-bottom: 60px;
+        }
+
+        /* Pattern Titik-titik (Dot Grid) ala Jurnal */
+        .lynk-wrapper::before {
+            content: ""; position: absolute; top:0; left:0; width:100%; height:100%;
+            background-image: radial-gradient(#D1D5DB 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.5; z-index: 0;
+        }
+
+        h1, h2, h3, .font-serif-fun { font-family: 'Calistoga', serif; }
+
+        /* --- ANIMATIONS (Pop Up Bouncy) --- */
+        .reveal-node {
+            opacity: 0; transform: scale(0.9) translateY(20px);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .reveal-node.active { opacity: 1; transform: scale(1) translateY(0); }
+
+        /* --- COMPONENTS --- */
+        
+        /* 1. Sticker Badge */
+        .sticker-badge {
+            background: #FEF3C7; color: #92400E;
+            transform: rotate(-3deg);
+            display: inline-block; padding: 5px 15px;
+            border-radius: 4px; border: 2px solid #1F2937;
+            box-shadow: 2px 2px 0px #1F2937;
+            font-weight: bold; font-size: 11px;
+            margin-bottom: 10px;
+        }
+
+        /* 2. Hero Image (Polaroid Style) */
+        .polaroid-card {
+            background: white; padding: 10px 10px 30px 10px;
+            border: 2px solid #1F2937; transform: rotate(2deg);
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+            margin: 20px auto; width: 240px;
+            position: relative;
+        }
+        .tape {
+            position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 25px; background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(2px); border-left: 1px dashed #ccc; border-right: 1px dashed #ccc;
+        }
+        .polaroid-img { width: 100%; height: 200px; object-fit: cover; border: 1px solid #eee; background: #eee; }
+
+        /* 3. Content Cards (Notebook Style) */
+        .note-card {
+            background: white; border: 2px solid #1F2937;
+            border-radius: 12px; padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 3px 3px 0 #1F2937;
+            position: relative;
+        }
+        .note-card::after { /* Efek Ring Jilid */
+            content: "|| || || ||";
+            position: absolute; top: -8px; left: 20px;
+            color: #9CA3AF; font-family: monospace; font-weight: bold;
+            letter-spacing: 5px; background: white; padding: 0 5px;
+        }
+
+        /* 4. Highlight Text */
+        .highlight {
+            background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 85%;
+        }
+
+        /* 5. Callout Box (Upsell) */
+        .callout-box {
+            background: #FFF1F2; border: 2px dashed #BE123C;
+            border-radius: 12px; padding: 15px;
+            display: flex; gap: 10px; align-items: start;
+            margin-top: 20px;
+        }
+        
+        /* Tombol Link Aesthetic */
+        .btn-aesthetic {
+            display: inline-block; width: 100%;
+            background: #1F2937; color: white;
+            padding: 10px 0; text-align: center;
+            border-radius: 8px; font-weight: bold;
+            border: 2px solid #1F2937;
+            transition: all 0.2s;
+            margin-top: 10px; text-decoration: none;
+        }
+        .btn-aesthetic:hover {
+            background: white; color: #1F2937;
+            box-shadow: 2px 2px 0 #1F2937; transform: translate(-2px, -2px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="lynk-wrapper">
+
+        <section class="w-full px-6 pt-10 pb-4 relative z-10 text-center">
+            <div class="reveal-node w-full max-w-lg mx-auto">
+                
+                <div class="sticker-badge">✨ SKILL WAJIB DIGITAL ✨</div>
+
+                <h1 class="text-3xl font-serif-fun text-gray-900 leading-tight mb-2">
+                    Jago <span class="highlight">Admin Support</span> & Virtual Assistant
+                </h1>
+                
+                <p class="text-xs text-gray-600 leading-relaxed max-w-xs mx-auto mb-4">
+                    Belajar dari 0 cara jadi asisten online yang dicari banyak klien. 
+                </p>
+
+                <div class="polaroid-card">
+                    <div class="tape"></div>
+                    <img src="https://cdn.lynkid.my.id/draft-products/01-01-2026/1767276351454_9966247.png" class="polaroid-img" alt="VA Course">
+                    <p class="text-[10px] text-gray-400 font-serif-fun mt-2 text-center">Work from Anywhere ☕</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full px-6 relative z-10">
+            <div class="reveal-node max-w-lg mx-auto">
+                <h3 class="font-bold text-sm mb-4 flex items-center gap-2">
+                    <span>📂</span> Apa aja isinya?
+                </h3>
+
+                <div class="note-card">
+                    <h4 class="font-serif-fun text-lg mb-2">1. Kerjanya Ngapain Aja?</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-2">
+                        Kita bedah tuntas bedanya <strong>Data Entry</strong> (Input data, rapi-rapi Excel) sama <strong>Admin Support</strong> (Balas email, atur jadwal bos, urus dokumen).
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-[9px] bg-green-100 px-2 py-1 rounded border border-green-200">Input Data</span>
+                        <span class="text-[9px] bg-blue-100 px-2 py-1 rounded border border-blue-200">Email Handling</span>
+                    </div>
+                </div>
+
+                <div class="note-card">
+                    <h4 class="font-serif-fun text-lg mb-2">2. Cara Bikin Portofolio</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        "Kak, aku kan belum punya pengalaman?" <br>
+                        Tenang! Aku ajarin cara bikin <strong>Dummy Project</strong>. Kita ambil soal dari internet, kerjain, jadiin portofolio deh. Klien gak bakal tau itu dummy! 🤫
+                    </p>
+                </div>
+
+                <div class="note-card">
+                    <h4 class="font-serif-fun text-lg mb-2">3. Trik Dapat Klien</h4>
+                    <ul class="text-xs text-gray-600 space-y-2 pl-1">
+                        <li>✅ <strong>Personal Branding:</strong> Biar klien yang nyari kamu.</li>
+                        <li>✅ <strong>Cold DM/Email:</strong> Cara sopan "nodong" kerjaan ke target klien.</li>
+                        <li>✅ <strong>Platform Freelance:</strong> Optimasi profil biar kelihatan pro.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full px-6 pb-6 relative z-10">
+            <div class="reveal-node max-w-lg mx-auto">
+                
+                <div class="callout-box">
+                    <div class="text-2xl">💡</div>
+                    <div>
+                        <h4 class="text-xs font-bold text-rose-700 mb-1">Sekilas Info:</h4>
+                        <p class="text-[11px] text-gray-700 leading-relaxed">
+                            Materi ini adalah "potongan" spesifik dari ebook besarku. Kalau kamu mau panduan remote work yang <strong>Full Version (A-Z)</strong>, mending cek ebook utamanya deh.
+                        </p>
+
+                        <a href="https://lynk.id/ajengwahys/7nw892ndj2gk" class="text-[10px] font-bold text-rose-600 underline mt-2 block hover:text-rose-800" target="_blank">
+                            👉 Cek Ebook "Becoming a Remote Worker" Just 99K!
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full px-6 py-8 flex flex-col items-center text-center relative z-10 bg-white border-t-2 border-dashed border-gray-200">
+            <h2 class="text-lg font-serif-fun text-gray-900 mb-1">Siap Kerja Remote?</h2>
+            <p class="text-xs text-gray-500 max-w-xs mb-4">
+                Investasi skill yang kepakai seumur hidup.
+            </p>
+            
+            <div class="w-full max-w-xs animate-bounce opacity-90">
+                <p class="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-1">
+                    Ambil Aksesnya Di Bawah 👇
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-node').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
